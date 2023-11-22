@@ -21,7 +21,7 @@ export const InputTextWithValidation:FC<InputTextWithValidationProps> = ({field,
         pt={{
           root: {
             style: {
-              fontSize: "20px",
+              fontSize: "18px",
               padding: "4px",
               fontFamily: "Poppins",
             },

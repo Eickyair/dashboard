@@ -32,8 +32,9 @@ export const Login: FC = () => {
       className="flex flex-col justify-center items-center h-screen gap-4"
       onSubmit={loginData.handleSubmit}
     >
-      <div className="flex flex-col gap-5 w-[600px] text-center p-3 shadow-2xl rounded-2xl">
+      <div className="flex flex-col gap-5 w-[600px] text-center p-5 shadow-2xl rounded-2xl">
         <h3 className="text-4xl">A La Carta</h3>
+        <h4 className="text-2xl">Dashboard</h4>
         <hr />
         <div className="flex flex-col gap-3">
           <InputTextWithValidation
@@ -58,22 +59,11 @@ export const Login: FC = () => {
         <div className="flex justify-end">
           <Button
             type="submit"
-            pt={{
-              root: {
-                style: {
-                  fontSize: 20,
-                },
-              },
-            }}
+            className="text-xl text-gray-300"
           >
             Login
           </Button>
         </div>
-      </div>
-      <div className="w-[580px] flex justify-end">
-        <Link href={"/registro"} className="text-sm text-blue-600 underline">
-          Registrarse
-        </Link>
       </div>
     </form>
   );
