@@ -1683,6 +1683,16 @@ json5@^1.0.2:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
+just-group-by@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/just-group-by/-/just-group-by-2.2.0.tgz#814be9b4ab55b1bed07c3df6587b7fbbfe0f9c9c"
+  integrity sha512-brZocDSmkvDYc+FOr07GiTar4cp7K6OB9huVOrj5LX+iXfCe3hTvn2KGM811LE/SBQkCzuYDDEcG8HA/dKDrnw==
+
+just-mean@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/just-mean/-/just-mean-2.2.0.tgz#e4236d4742d109d5d88b00c6cab3a265840d55e0"
+  integrity sha512-ZLZHJz3AHF+mk/FwB3FOf1GTfT3UfaE2Dr0UbuVixWhOOtI2ed+S+6V0QFpcZdPjA8hNES0TJqs1G7DpMAtkQw==
+
 keyv@^4.5.3:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.4.tgz#a879a99e29452f942439f2a405e3af8b31d4de93"

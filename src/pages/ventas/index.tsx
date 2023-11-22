@@ -3,7 +3,7 @@ import { ListaDeCartasPorMes, VentasLayout } from "@/components";
 const VentasPage = () => {
   return (
     <VentasLayout>
-      <ListaDeCartasPorMes />
+      {/* <ListaDeCartasPorMes /> */}
     </VentasLayout>
   );
 };

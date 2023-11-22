@@ -79,7 +79,7 @@ export const ListaDeAlimentosMenu = () => {
                 Math.min(index + elementosPorFila, _menu.length)
               );
               return (
-                <div className="flex gap-3">
+                <div className="flex gap-3" key={index}>
                   {elementsToRender.map((item, subIndex) => (
                     <ItemListaAlimentosMenu
                       key={subIndex}
