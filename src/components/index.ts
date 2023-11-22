@@ -3,6 +3,8 @@ export * from './BalancesGenerales/OrdenesPorMesChart/OrdenesPorMesChar';
 export * from './BalancesGenerales';
 export * from './InputWithTextValidation';
 export * from './Layout';
+export * from './ListaDeAlimentosMenu';
+export * from './ListaDeCartasPorMes/CartaMes';
 export * from './ListaDeCartasPorMes';
 export * from './Login';
 export * from './MenuLayout';

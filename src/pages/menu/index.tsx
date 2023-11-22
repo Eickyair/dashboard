@@ -1,9 +1,9 @@
-import { ListaDeCartasPorMes, MenuLayout } from "@/components";
+import { ListaDeAlimentosMenu, MenuLayout } from "@/components";
 
 const MenuPage = () => {
   return (
     <MenuLayout>
-      <ListaDeCartasPorMes />
+      <ListaDeAlimentosMenu />
     </MenuLayout>
   );
 };

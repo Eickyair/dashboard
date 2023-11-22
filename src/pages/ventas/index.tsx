@@ -1,9 +1,11 @@
-import { VentasLayout } from "@/components"
+import { ListaDeCartasPorMes, VentasLayout } from "@/components";
 
 const VentasPage = () => {
   return (
-    <VentasLayout>VentasPage</VentasLayout>
-  )
-}
+    <VentasLayout>
+      <ListaDeCartasPorMes />
+    </VentasLayout>
+  );
+};
 
-export default VentasPage
+export default VentasPage;

@@ -7,7 +7,7 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ children }) => {
   const { data: session } = useSession();
   return (
-    <div>
+    <div className="bg-negro min-h-[100vh]">
       {session && <Navbar />}
       {children}
     </div>
