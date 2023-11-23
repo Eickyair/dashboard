@@ -4,5 +4,9 @@
       "ordenesCanceladas":10,
       "promedioDelMontoTotal":194.924,
       "totalDeOrdenes":32
+  },
+  {
+    "hora":0,
+    "numeroOrdenes":2393
   }
 ]

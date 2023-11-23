@@ -1,9 +1,16 @@
-import { OrdenLayout } from "@/components"
+import {
+  LineaTendenciaHoraPico,
+  OrdenLayout,
+  PlatoMasVendido,
+} from "@/components";
 
 const OrdenPage = () => {
   return (
-    <OrdenLayout>OrdenPage</OrdenLayout>
-  )
-}
+    <OrdenLayout>
+      <LineaTendenciaHoraPico />
+      <PlatoMasVendido />
+    </OrdenLayout>
+  );
+};
 
-export default OrdenPage
+export default OrdenPage;
