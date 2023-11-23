@@ -8,25 +8,34 @@ export const OrdenesPorMesChar = () => {
     undefined,
     { refetchOnWindowFocus: false, refetchOnMount: true }
   );
-  if(!data) return "Loading..."
+  if (!data) return "Loading...";
   const chartData = {
     labels: data.estadiscas.map(({ mes }) => mes),
     datasets: [
       {
         label: "Ordenes",
-        data: data.estadiscas.sort(({mes},{mes:mes2})=> determinarNumeroDelMes(mes)-determinarNumeroDelMes(mes2) ).map(({ totalDeOrdenes }) => totalDeOrdenes),
+        data: data.estadiscas
+          .sort(
+            ({ mes }, { mes: mes2 }) =>
+              determinarNumeroDelMes(String(mes)) - determinarNumeroDelMes(String(mes2))
+          )
+          .map(({ totalDeOrdenes }) => totalDeOrdenes),
       },
     ],
-  }
+  };
   return (
     <div className="card">
-      <Chart type="bar" data={chartData} options={{
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    }} />
+      <Chart
+        type="bar"
+        data={chartData}
+        options={{
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        }}
+      />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import { BalancesGenerales } from "..";
 interface VentasLayoutProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 export const VentasLayout: FC<VentasLayoutProps> = ({ children }) => {
   return (
