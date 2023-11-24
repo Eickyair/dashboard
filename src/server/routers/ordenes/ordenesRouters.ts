@@ -14,4 +14,27 @@ export const ordenRouter = router({
     });
     return { data: estadisticas };
   }),
+  platoMasVendido: ordenProcedure.query(async () => {
+    const informacionAProcesar = await prisma.orden_general.findMany({
+      include: {
+        orden_detalle: {
+          include: {
+            alimento: true,
+          },
+        },
+      },
+      where: {
+        estatus: {
+          equals: "ENTREGADA",
+        },
+      },
+    });
+    console.log(informacionAProcesar)
+    return {
+      alimentoMasVendido: {},
+      alimentoQueGeneroMas: {},
+      alimentoMenosVendido: {},
+      informacionAProcesar,
+    };
+  }),
 });

@@ -7,7 +7,9 @@ import {
 const OrdenPage = () => {
   return (
     <OrdenLayout>
-      <LineaTendenciaHoraPico />
+      <div className="p-10 bg-blanco w-[70%] mx-auto">
+        <LineaTendenciaHoraPico />
+      </div>
       <PlatoMasVendido />
     </OrdenLayout>
   );

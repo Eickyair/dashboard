@@ -10,19 +10,30 @@ export const LineaTendenciaHoraPico = () => {
     labels: data.data.map((item) => "Hora:" + item.hora),
     datasets: [
       {
-        label: "Horas Pico",
+        label: "Promedio de Ordenes por Hora",
         data: data.data.map((item) => item.cantidadDeOrdenes),
         fill: false,
         tension: 0.1,
       },
     ],
   };
-  console.log({ data });
   return (
-    <div>
-      <div className="w-[70%] mx-auto">
-        <Chart type="line" data={chartData} />
+      <div className="bg-grisOscuro p-4 rounded-lg shadow-2xl">
+        <Chart type="line" data={chartData} options={{
+          responsive:true,
+          scales:{
+            x:{
+              grid:{
+                color:"#444"
+              }
+            },
+            y:{
+              grid:{
+                color:"#444"
+              }
+            }
+          }
+        }} />
       </div>
-    </div>
   );
 };
