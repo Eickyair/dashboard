@@ -1,16 +1,16 @@
 import {
   LineaTendenciaHoraPico,
   OrdenLayout,
-  PlatoMasVendido,
+  TopPlatos,
 } from "@/components";
 
 const OrdenPage = () => {
   return (
     <OrdenLayout>
-      <div className="p-10 bg-blanco w-[70%] mx-auto">
+      <div className="bg-blanco w-[80%] mx-auto p-10">
         <LineaTendenciaHoraPico />
+        <TopPlatos />
       </div>
-      <PlatoMasVendido />
     </OrdenLayout>
   );
 };

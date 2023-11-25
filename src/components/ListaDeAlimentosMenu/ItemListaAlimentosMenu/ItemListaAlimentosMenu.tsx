@@ -22,7 +22,7 @@ export const ItemListaAlimentosMenu: FC<ItemListaAlimentosMenuProps> = ({
         <div className="flex flex-col gap-1">
           <h2 className="text-3xl font-roboto">{nombre}</h2>
           <span className="flex items-center gap-5 font-nunito text-md">
-            <span className="text-xl">{precio}$ </span><Tag>{nombreCategoria}</Tag>
+            <span className="text-xl">Precio: {precio}$ </span><Tag>{nombreCategoria}</Tag>
           </span>
         </div>
       </div>
