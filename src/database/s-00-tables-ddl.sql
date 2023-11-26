@@ -1,9 +1,3 @@
---@Autor: Aguilar Martinez Erick Yair - thecommiter
-
---@Fecha creación: 2023-11-17
-
---@Descripción: Breve descripción del contenido del script
-
 -- Table: Empleado
 
 CREATE TABLE
@@ -200,7 +194,7 @@ create table
         genero_factura boolean default false not null,
         folio varchar(40),
         fecha timestamp default now() not null,
-        total numeric(15, 2) not null,
+        total numeric(15, 2) DEFAULT 0 not null,
         cliente_id serial not null,
         numero_empleado_id serial,
         constraint orden_general_pk primary key(orden_general_id),

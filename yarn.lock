@@ -254,6 +254,11 @@
   resolved "https://registry.npmjs.org/@trpc/server/-/server-10.44.1.tgz"
   integrity sha512-mF7B+K6LjuboX8I1RZgKE5GA/fJhsJ8tKGK2UBt3Bwik7hepEPb4NJgNr7vO6BK5IYwPdBLRLTctRw6XZx0sRg==
 
+"@types/crypto-js@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@types/crypto-js/-/crypto-js-4.2.1.tgz#480edd76991a63050cb88db1a8840758c55a7135"
+  integrity sha512-FSPGd9+OcSok3RsM0UZ/9fcvMOXJ1ENE/ZbLfOPlBWj7BgXtEAM8VYfTtT760GiLbQIMoVozwVuisjvsVwqYWw==
+
 "@types/debug@^4.0.0":
   version "4.1.12"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.12.tgz#a155f21690871953410df4b6b6f53187f0500917"
@@ -721,6 +726,11 @@ cross-spawn@^7.0.2:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
+
+crypto-js@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.2.0.tgz#4d931639ecdfd12ff80e8186dba6af2c2e856631"
+  integrity sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==
 
 cssesc@^3.0.0:
   version "3.0.0"

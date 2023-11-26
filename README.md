@@ -1,40 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Consideraciones
+Para poder ejecutar esta aplicación es necesario tener instalado <a href="https://nodejs.org/en">Nodejs</a> en su version LTS <a href="https://nodejs.org/download/release/v18.18.2/"><code>LTS 18.18.2</code></a> asi como configurar el path. También puede usarse la herramienta <a href="https://github.com/coreybutler/nvm-windows"><code>nvm-windows</code></a> la cual facilita este trabajo.<br>
+Es necesario tener instalado docker para poder levantar la base de datos.Ve el siguiente link para obtener mas informacion de la configuración necesaria <a href="https://docs.docker.com/get-docker/"><code>Docker</code></a>. Asegurarse de también instalar la herramienta<code>Docker Compose</code><br>
+Si los siguientes comandos no presentan problemas podrás continuar:<br>
+* <code>docker --version</code><br>
+* <code>node --version</code><br>
+* <code>docker compose version</code><br>
+# Script <code>s.ps1</code>
+Este script permite ejecutar los pasos que se muestran mas adelante. Como parámetro recibe una bandera <code>-b</code> que construye la aplicación y la ejecuta. En caso de no estar presente esta bandera entonces solo se levanta la app en modo de desarrollo.
 
-## Getting Started
+# Ejecutar en modo Modo De Desarrollo
 
-First, run the development server:
+1. Una vez instalado <code>nodejs</code> ejecutar <code>npm install --global yarn</code> y comprobar con <code>yarn --version</code>
+1. Entrar a la carpeta donde se descargo el proyecto, al mismo nivel que este archivo
+1. Ejecutar <code>yarn</code> que instalara las dependencias del proyecto en la carpeta <code>node_modules</code>
+1. Levantar la base de datos con <code>docker compose up -d</code>.<b>Nota</b>: se debe estar al mismo nivel que el archivo <code>docker-compose.yml</code>
+1. Ejecutar <code>yarn dev</code><br>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Para eliminar la instancia de base de datos ejecutar <code>docker compose down</code>
+# Ejecutar la aplicación construida
+Los pasos son exactamente igual hasta el numero 4.<br>
+5. Ejecutar <code>yarn build</code><br>
+6. Una vez que la construcción haya terminado, ejecutar <code>yarn start</code>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

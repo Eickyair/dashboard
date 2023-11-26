@@ -4,6 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { prisma } from "@/server/prisma";
 import type { NextApiRequest, NextApiResponse } from "next";
 const secret = process.env.NEXTAUTH_SECRET;
+import { SHA256 } from "crypto-js";
 export const authOptions: NextAuthOptions = {
   jwt: {
     maxAge: 3 * 60 * 60,
@@ -24,33 +25,19 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
         const { email, password } = credentials;
-        const cliente = await prisma.cliente.findUnique({
-          select: {
-            cliente_id: true,
-            nombre: true,
-          },
-          where: { email },
-        });
-
-        if (cliente) {
-          return {
-            id: cliente.cliente_id,
-            nombre: cliente.nombre,
-            tipo: "cliente",
-          };
-        }
         const empleado = await prisma.empleado.findUnique({
-          select: { numero_empleado_id: true, nombre: true },
+          select: { numero_empleado_id: true, nombre: true, pw: true },
           where: { email },
         });
-        if (empleado) {
-          return {
-            id: empleado.numero_empleado_id,
-            nombre: empleado.nombre,
-            tipo: "empleado",
-          };
-        }
-        return null;
+        if (!empleado) return null;
+        const hashPassword = SHA256(password).toString();
+        const { pw } = empleado;
+        if (hashPassword !== pw) return null;
+        return {
+          id: empleado.numero_empleado_id,
+          nombre: empleado.nombre,
+          tipo: "empleado",
+        };
       },
     }),
   ],
