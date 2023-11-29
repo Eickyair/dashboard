@@ -11,8 +11,3 @@ services:
     restart: always
     volumes:
       - ./src/database:/docker-entrypoint-initdb.d
-  # web_app:
-  #   build: .
-  #   container_name: dashboard
-  #   depends_on:
-  #     - postgres_db
